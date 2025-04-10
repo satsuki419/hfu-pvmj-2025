@@ -1,0 +1,170 @@
+from datetime import datetime
+
+
+# view.html の修正版テンプレートを出力
+html_code = """
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>検討ログビューア</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .post {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 40px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    }
+    .post img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .haishi {
+      font-weight: bold;
+      font-size: 14px;
+      margin: 10px 0;
+      background: #fffae6;
+      padding: 5px;
+      border-left: 4px solid #ffa500;
+    }
+    .comments {
+      margin-top: 10px;
+      padding-left: 10px;
+      border-left: 2px solid #ddd;
+    }
+    .comment {
+      margin-bottom: 12px;
+    }
+    .meta {
+      font-size: 12px;
+      color: #777;
+      margin-top: 10px;
+    }
+    .tag {
+      background: #eef;
+      color: #444;
+      padding: 2px 6px;
+      margin-right: 5px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>牌譜検討（1件表示）</h1>
+<div id="post-container">読み込み中...</div>
+
+<script>
+function getQueryParam(key) {
+  const params = new URLSearchParams(window.location.search);
+  return params.get(key);
+}
+
+async function loadPostById(id) {
+  const now = new Date();
+  const currentMonth = now.toISOString().slice(0, 7);
+  const thisMonthFile = "haifuu_logs_" + currentMonth + ".json";
+  const indexFile = "index_master.json";
+
+  try {
+    const res = await fetch(thisMonthFile);
+    const logs = await res.json();
+    const post = logs.find(p => p.id == id);
+    if (post) {
+      renderPost(post, logs.filter(m => m.reply_to_id == post.id));
+      return;
+    }
+  } catch (e) {}
+
+  try {
+    const res = await fetch(indexFile);
+    const index = await res.json();
+    const month = index[id]?.month;
+    if (!month) throw "not found";
+
+    const logFile = "haifuu_logs_" + month + ".json";
+    const logRes = await fetch(logFile);
+    const logs = await logRes.json();
+    const post = logs.find(p => p.id == id);
+    if (post) {
+      renderPost(post, logs.filter(m => m.reply_to_id == post.id));
+    } else {
+      document.getElementById("post-container").innerHTML = "<p>投稿が見つかりませんでした。</p>";
+    }
+  } catch (e) {
+    document.getElementById("post-container").innerHTML = "<p>投稿が見つかりませんでした。</p>";
+  }
+}
+
+function renderPost(post, replies) {
+  let html = '<div class="post">';
+
+  const imagePath = post.local_image || post.image_url;
+  if (imagePath) {
+  html += '<img src="' + imagePath + '" alt="牌譜画像"><br>';
+  }
+
+  if (post.haishi && post.haishi.length) {
+    html += '<div class="haishi">🀄' + post.haishi[0] + '</div>';
+  }
+
+  const tags = new Set();
+  for (const reply of replies) {
+    (reply.tags || []).forEach(tag => tags.add(tag));
+  }
+
+  if (tags.size) {
+    html += '<div class="taglist">';
+    for (const tag of tags) {
+      html += '<span class="tag">#' + tag + '</span>';
+    }
+    html += '</div>';
+  }
+
+  html += '<div class="comments">';
+  for (const reply of replies) {
+    const comment = reply.comment || "";
+    const body = comment
+      .split("\\n")
+      .filter(line => {
+        const trimmed = line.trim();
+        return (
+          !trimmed.startsWith("@") &&
+          !trimmed.startsWith("📌") &&
+          !/^https?:\\/\\//.test(trimmed)
+        );
+      })
+      .join("<br>");
+    html += '<div class="comment"><div class="body">' + body + '</div></div>';
+  }
+  html += '</div></div>';
+
+  document.getElementById("post-container").innerHTML = html;
+}
+
+const id = getQueryParam("id");
+if (id) {
+  loadPostById(id);
+} else {
+  document.getElementById("post-container").innerHTML = "<p>IDが指定されていません。</p>";
+}
+</script>
+
+</body>
+</html>
+"""
+
+with open("view.html", "w", encoding="utf-8") as f:
+    f.write(html_code)

@@ -1,0 +1,1277 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>牌譜検討ログ</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    .post {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 40px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .post img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .haishi {
+      font-weight: bold;
+      font-size: 14px;
+      margin: 10px 0;
+      background: #fffae6;
+      padding: 5px;
+      border-left: 4px solid #ffa500;
+    }
+    .comments {
+      margin-top: 10px;
+      padding-left: 10px;
+      border-left: 2px solid #ddd;
+    }
+    .comment {
+      margin-bottom: 12px;
+    }
+    a {
+    color: #0077cc;
+    text-decoration: none;
+    }
+
+    a:hover {
+    text-decoration: underline;
+    }
+
+    .tag {
+    background: #eef;
+    color: #444; /* ←ここがポイント！タグの文字色を落ち着いたグレーに */
+    padding: 2px 6px;
+    margin-right: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    }
+    .taglist {
+     margin: 10px 0;
+    }
+    .meta {
+  font-size: 12px;
+  color: #777;
+  margin-top: 10px;
+}
+
+.meta-item {
+  margin-bottom: 2px;
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed #ccc;
+  margin: 10px 0;
+}
+  </style>
+</head>
+<body>
+
+
+<h1>牌譜検討まとめ</h1>
+
+
+<input type="text" id="searchBox" placeholder="キーワード検索..." oninput="filterPostsByText()" style="width: 300px; padding: 5px; margin: 10px 0; font-size: 14px;">
+<p id="resultCount" style="font-size: 13px; color: #555;">🔎 全件表示中</p>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359391563310174269/IMG_6320.png?ex=67f74f8c&is=67f5fe0c&hm=3a1d52f0a8d2251ddffb50163196cb151369d781cff6c0aa322d48ed49ab21d3&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#形初級</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#形初級</div>
+      </div>
+      <div class="comment">
+        <div class="body">#形初級</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬3p切り<br>💡ロスにならないものを選ぶ。<br>シャンテン数の理解<br>346sは5sを引いてもやり直せる<br>3pを切ると2p引きが痛いし3556pは4pでテンパイも逃してしまう。<br>3456sの4連形は強いが5sが受かってるから6s切りがよい</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬3p切り<br>💡ロスにならないものを選ぶ。<br>シャンテン数の理解<br>346sは5sを引いてもやり直せる<br>3pを切ると2p引きが痛いし3556pは4pでテンパイも逃してしまう。<br>3456sの4連形は強いが5sが受かってるから6s切りがよい</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359393007719157770/IMG_6321.png?ex=67f750e5&is=67f5ff65&hm=fec847e9a9bab2b65f9caf60bbca3b4616c867986c82f7c07eeb00c2a241fae2&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#形初級</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#形初級</div>
+      </div>
+      <div class="comment">
+        <div class="body">#形初級</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬2s切り<br>💡確かに頭がなくみえるけど、1pのアンカンはイーハンアップ！<br>カンしよう</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬2s切り<br>💡確かに頭がなくみえるけど、1pのアンカンはイーハンアップ！<br>カンしよう</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359393456447033444/IMG_6322.png?ex=67f75150&is=67f5ffd0&hm=050630a06cbb45c3b86a221196fd4dab5658537c3a734409ae87e07795000a6e&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#4対子</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#4対子</div>
+      </div>
+      <div class="comment">
+        <div class="body">#4対子</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬4p切り<br>💡前巡の6p切りとてもよい！どちらも残す選択をするなら9s<br>今回はメンツ手も強く見てよし<br>⏰<br>🀄1123556m334p5779s</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬4p切り<br>💡前巡の6p切りとてもよい！どちらも残す選択をするなら9s<br>今回はメンツ手も強く見てよし<br>⏰<br>🀄1123556m334p5779s</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359394450987683900/IMG_6323.png?ex=67f7523d&is=67f600bd&hm=a10e4da9123e12698560941ae6c2fdf4e4be69531cababb6da19958598121309&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#4対子</span>
+    <span class="tag">#5対子</span>
+    <span class="tag">#ドラ</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#4対子 #ドラ</div>
+      </div>
+      <div class="comment">
+        <div class="body">#4対子 #ドラ</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬3p<br>💡ドラアンコに対応できないから素直に西をきるべし！<br>#5対子</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬3p<br>💡ドラアンコに対応できないから素直に西をきるべし！<br>#5対子</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359395096931602502/IMG_6353.png?ex=67f752d7&is=67f60157&hm=e19ba8c6164640a0be39a8915aa5c5c13b93d68d821fa31d76ce589932204f67&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#対仕掛け</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#対仕掛け</div>
+      </div>
+      <div class="comment">
+        <div class="body">#対仕掛け</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬2s<br>💡ドラが3s。いらないものをそのまま切ろう！<br>仕掛けに対応したのか確認。<br>対応だった場合この手の価値について考えてもらう。<br>形はわかっていそう。</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬2s<br>💡ドラが3s。いらないものをそのまま切ろう！<br>仕掛けに対応したのか確認。<br>対応だった場合この手の価値について考えてもらう。<br>形はわかっていそう。</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359396046392000664/IMG_6354.png?ex=67f753b9&is=67f60239&hm=482ef0161dc1a7eb88ed1dbec98b5564ac61fa76ed1dba333560d792ca25c029&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#オーラス</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#オーラス</div>
+      </div>
+      <div class="comment">
+        <div class="body">#オーラス</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬6p<br>💡オーラスでトップと3000点差の2着目。南も北もどちらも役牌だから<br>待ちになってもよし<br>リーチしてツモでまくるよ！<br>ツモ直のどちらもあるならリーチを見よう。5p切り推奨</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬6p<br>💡オーラスでトップと3000点差の2着目。南も北もどちらも役牌だから<br>待ちになってもよし<br>リーチしてツモでまくるよ！<br>ツモ直のどちらもあるならリーチを見よう。5p切り推奨</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359396846362955786/IMG_6355.png?ex=67f75478&is=67f602f8&hm=a4caa2b9807b9c505b307e7f2ad3d2e464a0da9550dbdfa98eb4fe4977981a9c&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#オーラス</span>
+    <span class="tag">#リーチ受け</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#オーラス</div>
+      </div>
+      <div class="comment">
+        <div class="body">#オーラス</div>
+      </div>
+      <div class="comment">
+        <div class="body">#リーチ受け<br>💬2s<br>💡せっかくできた条件！降りません。Mリーグルールなのでリーチ棒がでたからドラじゃなくても同点トップ<br>3mは押そう（6mの筋にもなったよ）<br>❓if協会ルール。巡目早くていい待ちに変化したらドラ切りもある？</div>
+      </div>
+      <div class="comment">
+        <div class="body">#リーチ受け<br>💬2s<br>💡せっかくできた条件！降りません。Mリーグルールなのでリーチ棒がでたからドラじゃなくても同点トップ<br>3mは押そう（6mの筋にもなったよ）<br>❓if協会ルール。巡目早くていい待ちに変化したらドラ切りもある？</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359401942090252459/IMG_6357.png?ex=67f75937&is=67f607b7&hm=659d19d211109c2c1f9290937b2ca0c41d2548b3584e036789e31dd437de90f4&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359402439140442182/IMG_6358.png?ex=67f759ad&is=67f6082d&hm=607165db1928198ce685db93225fe97f01abeccb8b98a2921b5fb71665864023&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#3対子</span>
+    <span class="tag">#ターツ不足</span>
+    <span class="tag">#リャンカン</span>
+    <span class="tag">#愚形固定</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬9s<br>💡3対子を見つけて、弱いからと9sを払ったのかな？<br>今回はターツが足りてないから9sはだめ。<br>思考を順番に<br>赤5pは使いたいから557pを触らない<br>🀄123668m557p13599s ドラ北 赤5p<br><br>#3対子 #ターツ不足 #リャンカン #愚形固定</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬9s<br>💡3対子を見つけて、弱いからと9sを払ったのかな？<br>今回はターツが足りてないから9sはだめ。<br>思考を順番に<br>赤5pは使いたいから557pを触らない<br>🀄123668m557p13599s ドラ北 赤5p<br><br>#3対子 #ターツ不足 #リャンカン #愚形固定</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359404038046744686/IMG_6359.png?ex=67f75b2b&is=67f609ab&hm=d9a219e89fd4acfce538e861dd70ffefd7218f359721b138897d595e53353e12&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#形複雑</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">🀄2344668m5577p135s ドラ北 赤5p<br>⏰<br>#形複雑</div>
+      </div>
+      <div class="comment">
+        <div class="body">🀄2344668m5577p135s ドラ北 赤5p<br>⏰<br>#形複雑</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359404639510069258/IMG_6360.png?ex=67f75bba&is=67f60a3a&hm=164a2cda7203f173344b511ca9fb2b816567486b2b82467f4a56e8eb0f823f00&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#比較初級</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬9p<br>💡ここまでの手順ほんとーーーによかった！9s残しちゃうと一通にあまりならないので、ここも9sを切ろ！<br>❓3s2切れだった💦それだと縦受けなくなるけど1sもほんのりありそうかも?<br><br>#比較初級</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬9p<br>💡ここまでの手順ほんとーーーによかった！9s残しちゃうと一通にあまりならないので、ここも9sを切ろ！<br>❓3s2切れだった💦それだと縦受けなくなるけど1sもほんのりありそうかも?<br><br>#比較初級</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359405899688579235/IMG_6361.png?ex=67f75ce7&is=67f60b67&hm=a31aab1d53c4521d17cbb1996e5c4b992ac62353c2dc79a51303b120462bab83&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#形</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">🀄45668m67p1124668s ドラ1s 赤5m<br>💬6s<br>❓678の3色も残せるのがメリット。結構いい気がする<br>➡️8m。678がかなりなりづらいから形優先で！<br>例えば6sを切って7s引いて上手くいったってなるかと言われると？てなるかなあ？<br>#形</div>
+      </div>
+      <div class="comment">
+        <div class="body">🀄45668m67p1124668s ドラ1s 赤5m<br>💬6s<br>❓678の3色も残せるのがメリット。結構いい気がする<br>➡️8m。678がかなりなりづらいから形優先で！<br>例えば6sを切って7s引いて上手くいったってなるかと言われると？てなるかなあ？<br>#形</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359406461775773878/IMG_6362.png?ex=67f75d6d&is=67f60bed&hm=d85e414edb3c993c0a1f47713d76ac21a939f429e67cb5df700b219e69513b7f&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#テンパイ外し</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬9s切り外し<br>☀️9pが2切れなので外しの選択肢はとてもよい。ただし9sより9pを切って6mとのくっつきにしたほうがよさそうかな？<br>#テンパイ外し</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬9s切り外し<br>☀️9pが2切れなので外しの選択肢はとてもよい。ただし9sより9pを切って6mとのくっつきにしたほうがよさそうかな？<br>#テンパイ外し</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359406993114267741/IMG_6363.png?ex=67f75deb&is=67f60c6b&hm=85b6a76529ec3ae4b5397264f577127d1fbdceb79d27982783bc6ae30ba26ad3&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬6p<br>💡8mのが良さそう。<br>⚠️説明の仕方考える</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬6p<br>💡8mのが良さそう。<br>⚠️説明の仕方考える</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359407706112266445/IMG_6364.png?ex=67f75e95&is=67f60d15&hm=f19d20d468f48211ebacb1fe4433d65f9300539d59971219a637c9b2b6b73a49&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#何切る</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬3m<br>🀄233889m3589p89s中中 ドラ5m<br>#何切る</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬3m<br>🀄233889m3589p89s中中 ドラ5m<br>#何切る</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359409472874876978/IMG_6365.png?ex=67f7603a&is=67f60eba&hm=1270536e46a43596ebda32d44af73102adf54c44ca474ab91ce0b28b9dfbc7a4&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#テンパイ取り</span>
+    <span class="tag">#ハイテイ</span>
+    <span class="tag">#点棒状況</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬5p切り<br>💡南2。今トップ目。親を頑張って継続しなくていい。<br>❓これが東場なら？テンパイも偉いてなるよね？<br><br>#ハイテイ #テンパイ取り #点棒状況</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬5p切り<br>💡南2。今トップ目。親を頑張って継続しなくていい。<br>❓これが東場なら？テンパイも偉いてなるよね？<br><br>#ハイテイ #テンパイ取り #点棒状況</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359410002057760798/IMG_6366.png?ex=67f760b9&is=67f60f39&hm=6d89291fcf8f52d9b666e377cf0ca3fcc540941c93fcc73266207cfbde72ccbd&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#仕掛け判断</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬5pポン<br>☀️ドラ対子だけど5pは形悪い。積極的でいいと思うけど、鳴かない選択もありか？<br>#仕掛け判断</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬5pポン<br>☀️ドラ対子だけど5pは形悪い。積極的でいいと思うけど、鳴かない選択もありか？<br>#仕掛け判断</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359428877822464000/IMG_6367.png?ex=67f7724d&is=67f620cd&hm=09167101bdececa830c46ad3bf63241ace6daab28251032acd9a52a9ccdc3d94&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬ドラポンだが4s切り<br>☀️勇気をだして偉い</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬ドラポンだが4s切り<br>☀️勇気をだして偉い</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359556873707196649/IMG_6368.png?ex=67f7e982&is=67f69802&hm=db596a396499bf384cb17b28f11a0a43a89dd1acfe07fcc6d4db07ef8885ee28&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#test</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">テストを編集したテストですへんしゅうｓｙひうおあうぢｇかｄｓｊがいごｓｄｋｇじゃ</div>
+      </div>
+      <div class="comment">
+        <div class="body">テストを編集したテストですへんしゅうｓｙひうおあうぢｇかｄｓｊがいごｓｄｋｇじゃ</div>
+      </div>
+      <div class="comment">
+        <div class="body">テスト</div>
+      </div>
+      <div class="comment">
+        <div class="body">テスト</div>
+      </div>
+      <div class="comment">
+        <div class="body">IDによる変更のテスト<br>#test</div>
+      </div>
+      <div class="comment">
+        <div class="body">IDによる変更のテスト<br>#test</div>
+      </div>
+      <div class="comment">
+        <div class="body">編集した！</div>
+      </div>
+      <div class="comment">
+        <div class="body">編集した！</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09</div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359193638122291452/1359599394059718916/IMG_6368.png?ex=67f8111b&is=67f6bf9b&hm=4cccd46f18563b5c745a763df3f14a55148bc3ccadab0df4e869fc6bd0b18802&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#仕掛け判断</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">💬5pポン<br>☀️ドラ対子だけど5pは形悪い。積極的でいいと思うけど、鳴かない選択もありか？<br>#仕掛け判断</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬5pポン<br>☀️ドラ対子だけど5pは形悪い。積極的でいいと思うけど、鳴かない選択もありか？<br>#仕掛け判断</div>
+      </div>
+      <div class="comment">
+        <div class="body">さらなるテスト</div>
+      </div>
+      <div class="comment">
+        <div class="body">さらなるテスト</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09</div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359193638122291452/1359625947787296909/IMG_6368.png?ex=67f829d6&is=67f6d856&hm=26c3d996aa69e75431ea03382b728be13a6610c34ef5913164f164dd14c3a8a4&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">test</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-10</div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359391563310174269/IMG_6320.png?ex=67f74f8c&is=67f5fe0c&hm=3a1d52f0a8d2251ddffb50163196cb151369d781cff6c0aa322d48ed49ab21d3&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#形初級</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#形初級</div>
+      </div>
+      <div class="comment">
+        <div class="body">#形初級</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬3p切り<br>💡ロスにならないものを選ぶ。<br>シャンテン数の理解<br>346sは5sを引いてもやり直せる<br>3pを切ると2p引きが痛いし3556pは4pでテンパイも逃してしまう。<br>3456sの4連形は強いが5sが受かってるから6s切りがよい</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬3p切り<br>💡ロスにならないものを選ぶ。<br>シャンテン数の理解<br>346sは5sを引いてもやり直せる<br>3pを切ると2p引きが痛いし3556pは4pでテンパイも逃してしまう。<br>3456sの4連形は強いが5sが受かってるから6s切りがよい</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359393007719157770/IMG_6321.png?ex=67f750e5&is=67f5ff65&hm=fec847e9a9bab2b65f9caf60bbca3b4616c867986c82f7c07eeb00c2a241fae2&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#形初級</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#形初級</div>
+      </div>
+      <div class="comment">
+        <div class="body">#形初級</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬2s切り<br>💡確かに頭がなくみえるけど、1pのアンカンはイーハンアップ！<br>カンしよう</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬2s切り<br>💡確かに頭がなくみえるけど、1pのアンカンはイーハンアップ！<br>カンしよう</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359393456447033444/IMG_6322.png?ex=67f75150&is=67f5ffd0&hm=050630a06cbb45c3b86a221196fd4dab5658537c3a734409ae87e07795000a6e&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#4対子</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#4対子</div>
+      </div>
+      <div class="comment">
+        <div class="body">#4対子</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬4p切り<br>💡前巡の6p切りとてもよい！どちらも残す選択をするなら9s<br>今回はメンツ手も強く見てよし<br>⏰<br>🀄1123556m334p5779s</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬4p切り<br>💡前巡の6p切りとてもよい！どちらも残す選択をするなら9s<br>今回はメンツ手も強く見てよし<br>⏰<br>🀄1123556m334p5779s</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359394450987683900/IMG_6323.png?ex=67f7523d&is=67f600bd&hm=a10e4da9123e12698560941ae6c2fdf4e4be69531cababb6da19958598121309&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#4対子</span>
+    <span class="tag">#5対子</span>
+    <span class="tag">#ドラ</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#4対子 #ドラ</div>
+      </div>
+      <div class="comment">
+        <div class="body">#4対子 #ドラ</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬3p<br>💡ドラアンコに対応できないから素直に西をきるべし！<br>#5対子</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬3p<br>💡ドラアンコに対応できないから素直に西をきるべし！<br>#5対子</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359395096931602502/IMG_6353.png?ex=67f752d7&is=67f60157&hm=e19ba8c6164640a0be39a8915aa5c5c13b93d68d821fa31d76ce589932204f67&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#対仕掛け</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#対仕掛け</div>
+      </div>
+      <div class="comment">
+        <div class="body">#対仕掛け</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬2s<br>💡ドラが3s。いらないものをそのまま切ろう！<br>仕掛けに対応したのか確認。<br>対応だった場合この手の価値について考えてもらう。<br>形はわかっていそう。</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬2s<br>💡ドラが3s。いらないものをそのまま切ろう！<br>仕掛けに対応したのか確認。<br>対応だった場合この手の価値について考えてもらう。<br>形はわかっていそう。</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359396046392000664/IMG_6354.png?ex=67f753b9&is=67f60239&hm=482ef0161dc1a7eb88ed1dbec98b5564ac61fa76ed1dba333560d792ca25c029&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#オーラス</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#オーラス</div>
+      </div>
+      <div class="comment">
+        <div class="body">#オーラス</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬6p<br>💡オーラスでトップと3000点差の2着目。南も北もどちらも役牌だから<br>待ちになってもよし<br>リーチしてツモでまくるよ！<br>ツモ直のどちらもあるならリーチを見よう。5p切り推奨</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬6p<br>💡オーラスでトップと3000点差の2着目。南も北もどちらも役牌だから<br>待ちになってもよし<br>リーチしてツモでまくるよ！<br>ツモ直のどちらもあるならリーチを見よう。5p切り推奨</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359396846362955786/IMG_6355.png?ex=67f75478&is=67f602f8&hm=a4caa2b9807b9c505b307e7f2ad3d2e464a0da9550dbdfa98eb4fe4977981a9c&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#オーラス</span>
+    <span class="tag">#リーチ受け</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">#オーラス</div>
+      </div>
+      <div class="comment">
+        <div class="body">#オーラス</div>
+      </div>
+      <div class="comment">
+        <div class="body">#リーチ受け<br>💬2s<br>💡せっかくできた条件！降りません。Mリーグルールなのでリーチ棒がでたからドラじゃなくても同点トップ<br>3mは押そう（6mの筋にもなったよ）<br>❓if協会ルール。巡目早くていい待ちに変化したらドラ切りもある？</div>
+      </div>
+      <div class="comment">
+        <div class="body">#リーチ受け<br>💬2s<br>💡せっかくできた条件！降りません。Mリーグルールなのでリーチ棒がでたからドラじゃなくても同点トップ<br>3mは押そう（6mの筋にもなったよ）<br>❓if協会ルール。巡目早くていい待ちに変化したらドラ切りもある？</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-1</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250331-10e5ff85-14c6-4ca6-b228-87199d65c415_a115250445" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359401942090252459/IMG_6357.png?ex=67f75937&is=67f607b7&hm=659d19d211109c2c1f9290937b2ca0c41d2548b3584e036789e31dd437de90f4&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359402439140442182/IMG_6358.png?ex=67f759ad&is=67f6082d&hm=607165db1928198ce685db93225fe97f01abeccb8b98a2921b5fb71665864023&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#3対子</span>
+    <span class="tag">#ターツ不足</span>
+    <span class="tag">#リャンカン</span>
+    <span class="tag">#愚形固定</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬9s<br>💡3対子を見つけて、弱いからと9sを払ったのかな？<br>今回はターツが足りてないから9sはだめ。<br>思考を順番に<br>赤5pは使いたいから557pを触らない<br>🀄123668m557p13599s ドラ北 赤5p<br><br>#3対子 #ターツ不足 #リャンカン #愚形固定</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬9s<br>💡3対子を見つけて、弱いからと9sを払ったのかな？<br>今回はターツが足りてないから9sはだめ。<br>思考を順番に<br>赤5pは使いたいから557pを触らない<br>🀄123668m557p13599s ドラ北 赤5p<br><br>#3対子 #ターツ不足 #リャンカン #愚形固定</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359404038046744686/IMG_6359.png?ex=67f75b2b&is=67f609ab&hm=d9a219e89fd4acfce538e861dd70ffefd7218f359721b138897d595e53353e12&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#形複雑</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">🀄2344668m5577p135s ドラ北 赤5p<br>⏰<br>#形複雑</div>
+      </div>
+      <div class="comment">
+        <div class="body">🀄2344668m5577p135s ドラ北 赤5p<br>⏰<br>#形複雑</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359404639510069258/IMG_6360.png?ex=67f75bba&is=67f60a3a&hm=164a2cda7203f173344b511ca9fb2b816567486b2b82467f4a56e8eb0f823f00&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#比較初級</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬9p<br>💡ここまでの手順ほんとーーーによかった！9s残しちゃうと一通にあまりならないので、ここも9sを切ろ！<br>❓3s2切れだった💦それだと縦受けなくなるけど1sもほんのりありそうかも?<br><br>#比較初級</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬9p<br>💡ここまでの手順ほんとーーーによかった！9s残しちゃうと一通にあまりならないので、ここも9sを切ろ！<br>❓3s2切れだった💦それだと縦受けなくなるけど1sもほんのりありそうかも?<br><br>#比較初級</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359405899688579235/IMG_6361.png?ex=67f75ce7&is=67f60b67&hm=a31aab1d53c4521d17cbb1996e5c4b992ac62353c2dc79a51303b120462bab83&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#形</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">🀄45668m67p1124668s ドラ1s 赤5m<br>💬6s<br>❓678の3色も残せるのがメリット。結構いい気がする<br>➡️8m。678がかなりなりづらいから形優先で！<br>例えば6sを切って7s引いて上手くいったってなるかと言われると？てなるかなあ？<br>#形</div>
+      </div>
+      <div class="comment">
+        <div class="body">🀄45668m67p1124668s ドラ1s 赤5m<br>💬6s<br>❓678の3色も残せるのがメリット。結構いい気がする<br>➡️8m。678がかなりなりづらいから形優先で！<br>例えば6sを切って7s引いて上手くいったってなるかと言われると？てなるかなあ？<br>#形</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359406461775773878/IMG_6362.png?ex=67f75d6d&is=67f60bed&hm=d85e414edb3c993c0a1f47713d76ac21a939f429e67cb5df700b219e69513b7f&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#テンパイ外し</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬9s切り外し<br>☀️9pが2切れなので外しの選択肢はとてもよい。ただし9sより9pを切って6mとのくっつきにしたほうがよさそうかな？<br>#テンパイ外し</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬9s切り外し<br>☀️9pが2切れなので外しの選択肢はとてもよい。ただし9sより9pを切って6mとのくっつきにしたほうがよさそうかな？<br>#テンパイ外し</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359406993114267741/IMG_6363.png?ex=67f75deb&is=67f60c6b&hm=85b6a76529ec3ae4b5397264f577127d1fbdceb79d27982783bc6ae30ba26ad3&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬6p<br>💡8mのが良さそう。<br>⚠️説明の仕方考える</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬6p<br>💡8mのが良さそう。<br>⚠️説明の仕方考える</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359407706112266445/IMG_6364.png?ex=67f75e95&is=67f60d15&hm=f19d20d468f48211ebacb1fe4433d65f9300539d59971219a637c9b2b6b73a49&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#何切る</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬3m<br>🀄233889m3589p89s中中 ドラ5m<br>#何切る</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬3m<br>🀄233889m3589p89s中中 ドラ5m<br>#何切る</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359409472874876978/IMG_6365.png?ex=67f7603a&is=67f60eba&hm=1270536e46a43596ebda32d44af73102adf54c44ca474ab91ce0b28b9dfbc7a4&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#テンパイ取り</span>
+    <span class="tag">#ハイテイ</span>
+    <span class="tag">#点棒状況</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬5p切り<br>💡南2。今トップ目。親を頑張って継続しなくていい。<br>❓これが東場なら？テンパイも偉いてなるよね？<br><br>#ハイテイ #テンパイ取り #点棒状況</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬5p切り<br>💡南2。今トップ目。親を頑張って継続しなくていい。<br>❓これが東場なら？テンパイも偉いてなるよね？<br><br>#ハイテイ #テンパイ取り #点棒状況</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359410002057760798/IMG_6366.png?ex=67f760b9&is=67f60f39&hm=6d89291fcf8f52d9b666e377cf0ca3fcc540941c93fcc73266207cfbde72ccbd&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#仕掛け判断</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬5pポン<br>☀️ドラ対子だけど5pは形悪い。積極的でいいと思うけど、鳴かない選択もありか？<br>#仕掛け判断</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬5pポン<br>☀️ドラ対子だけど5pは形悪い。積極的でいいと思うけど、鳴かない選択もありか？<br>#仕掛け判断</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359428877822464000/IMG_6367.png?ex=67f7724d&is=67f620cd&hm=09167101bdececa830c46ad3bf63241ace6daab28251032acd9a52a9ccdc3d94&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body"></div>
+      </div>
+      <div class="comment">
+        <div class="body">💬ドラポンだが4s切り<br>☀️勇気をだして偉い</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬ドラポンだが4s切り<br>☀️勇気をだして偉い</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09 @ひろーんさん 📌hiron_202504-2</div>
+    <div class="meta-item"><a href="https://game.mahjongsoul.com/?paipu=250108-2c4cf53f-6fad-4e3a-889b-17a7649fd119_a408899980" target="_blank">🔗 雀魂</a></div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359371138043740401/1359556873707196649/IMG_6368.png?ex=67f7e982&is=67f69802&hm=db596a396499bf384cb17b28f11a0a43a89dd1acfe07fcc6d4db07ef8885ee28&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#test</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">テストを編集したテストですへんしゅうｓｙひうおあうぢｇかｄｓｊがいごｓｄｋｇじゃ</div>
+      </div>
+      <div class="comment">
+        <div class="body">テストを編集したテストですへんしゅうｓｙひうおあうぢｇかｄｓｊがいごｓｄｋｇじゃ</div>
+      </div>
+      <div class="comment">
+        <div class="body">テスト</div>
+      </div>
+      <div class="comment">
+        <div class="body">テスト</div>
+      </div>
+      <div class="comment">
+        <div class="body">IDによる変更のテスト<br>#test</div>
+      </div>
+      <div class="comment">
+        <div class="body">IDによる変更のテスト<br>#test</div>
+      </div>
+      <div class="comment">
+        <div class="body">編集した！</div>
+      </div>
+      <div class="comment">
+        <div class="body">編集した！</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09</div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359193638122291452/1359599394059718916/IMG_6368.png?ex=67f8111b&is=67f6bf9b&hm=4cccd46f18563b5c745a763df3f14a55148bc3ccadab0df4e869fc6bd0b18802&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="taglist">
+    <span class="tag">#仕掛け判断</span>
+  </div>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">💬5pポン<br>☀️ドラ対子だけど5pは形悪い。積極的でいいと思うけど、鳴かない選択もありか？<br>#仕掛け判断</div>
+      </div>
+      <div class="comment">
+        <div class="body">💬5pポン<br>☀️ドラ対子だけど5pは形悪い。積極的でいいと思うけど、鳴かない選択もありか？<br>#仕掛け判断</div>
+      </div>
+      <div class="comment">
+        <div class="body">さらなるテスト</div>
+      </div>
+      <div class="comment">
+        <div class="body">さらなるテスト</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-09</div>
+  </div>
+  </div>
+</div>
+
+<div class="post">
+  <img src="https://cdn.discordapp.com/attachments/1359193638122291452/1359625947787296909/IMG_6368.png?ex=67f829d6&is=67f6d856&hm=26c3d996aa69e75431ea03382b728be13a6610c34ef5913164f164dd14c3a8a4&" alt="牌譜画像" onclick="toggleDetails(this)"><br>
+  <div class="details" style="display: none;">
+    <div class="comments">
+      <div class="comment">
+        <div class="body">test</div>
+      </div>
+    </div>
+  <div class="meta">
+    <hr style="border: none; border-top: 1px dashed #ccc; margin: 10px 0;">
+    <div class="meta-item">投稿日: 2025-04-10</div>
+  </div>
+  </div>
+</div>
+
+
+<script>
+function toggleDetails(img) {
+  const post = img.closest(".post");
+  const details = post.querySelector(".details");
+  const isHidden = details.style.display === "none";
+  details.style.display = isHidden ? "block" : "none";
+}
+
+function filterPostsByText() {
+  const keyword = document.getElementById("searchBox").value.toLowerCase();
+  const posts = document.querySelectorAll(".post");
+  let matchCount = 0;
+
+  posts.forEach(post => {
+    const text = post.textContent.toLowerCase();
+    const isMatch = text.includes(keyword);
+    post.style.display = isMatch ? "block" : "none";
+    if (isMatch) matchCount++;
+  });
+
+  const resultText = keyword
+    ? `🔎 ${matchCount}件ヒットしました`
+    : "🔎 全件表示中";
+
+  document.getElementById("resultCount").textContent = resultText;
+}
+</script>
+</body>
+</html>
